@@ -11,7 +11,7 @@ Contents:
 .. toctree::
     :maxdepth: 2
 
-    stuff
+    writing
 
 Indices and tables
 ==================
@@ -20,18 +20,3 @@ Indices and tables
 * :ref:`modindex`
 * :ref:`search`
 
-Stuff
------
-
-Stuff is stuff, more stuff is stuff.
-
-I like stuff. Stuff is stuff.
-
-1. This is a list
-2. List is nice
-   1. I like list with stuff
-   2. Stuff is stuff
-
-| Line is line
-| More line is still line
-| Lines are liney
