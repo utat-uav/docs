@@ -37,9 +37,9 @@ Simple steps to set up an environment for writing the documentation on Windows:
 
 #. To set this `virtualenv` as your current working environment, navigate into your virtualenv directory and run ``Scripts\activate.bat``. To deselect, run ``Scripts\deactivate.bat``.
 
-#. After selecting this virtualenv directory, run ``pip install sphinx sphinx-autobuild``.
+#. After selecting this virtualenv directory, you'll need to install `sphinx`. You'll need to get `MarkupSafe`, which is a dependency. However, I've experienced issues with installing this package using `pip`. You'll need to download the binary_. ``MarkupSafe-0.23-cp27-none-win32.whl`` worked for me. Move it into the virtualenv folder and run ``pip install <your-whl-file-name>``. Usually if you type the first couple letters, you can press tab for autocomplete. Afterwards, run ``pip install sphinx recommonmark``.
 
-#. Then, clone the documentation repo from github. The current one is 
+#. Then, open up your github account. 
 
 .. _batch commands: http://www.makeuseof.com/tag/a-beginners-guide-to-the-windows-command-line/
 .. _github account: https://github.com/join
@@ -48,4 +48,4 @@ Simple steps to set up an environment for writing the documentation on Windows:
 .. _Python 2.7: https://www.python.org/downloads/
 .. _Virtualenv: https://www.dabapps.com/blog/introduction-to-pip-and-virtualenv-python/
 .. _introduction to command line: http://www.makeuseof.com/tag/a-beginners-guide-to-the-windows-command-line/
-
+.. _binary: http://www.lfd.uci.edu/~gohlke/pythonlibs/#markupsafe
