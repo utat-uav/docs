@@ -37,9 +37,19 @@ Simple steps to set up an environment for writing the documentation on Windows:
 
 #. To set this `virtualenv` as your current working environment, navigate into your virtualenv directory and run ``Scripts\activate.bat``. To deselect, run ``Scripts\deactivate.bat``.
 
-#. After selecting this virtualenv directory, you'll need to install `sphinx`. You'll need to get `MarkupSafe`, which is a dependency. However, I've experienced issues with installing this package using `pip`. You'll need to download the binary_. ``MarkupSafe-0.23-cp27-none-win32.whl`` worked for me. Move it into the virtualenv folder and run ``pip install <your-whl-file-name>``. Usually if you type the first couple letters, you can press tab for autocomplete. Afterwards, run ``pip install sphinx recommonmark``.
+#. After selecting this virtualenv directory, you'll need to install `sphinx`. You'll need to get `MarkupSafe`, which is a dependency. However, I've experienced issues with installing this package using `pip`. `You'll need to download the binary`_. 
+   
+   ``MarkupSafe-0.23-cp27-none-win32.whl`` worked for me. Move it into the virtualenv folder and run ``pip install <your-whl-file-name>``. Usually if you type the first couple letters, you can press tab for autocomplete. Afterwards, run ``pip install sphinx recommonmark``.
 
-#. Then, open up your github account. 
+#. Then, log into (or create) your Github account and go to the UAV docs repository at https://github.com/utat-uav/docs. Click ``fork``. You now have a personal copy of the UAV docs. You can change it at will and it won't affect the production docs. Afterwards, `clone it to your local machine`_. Make sure to clone it inside your virtualenv directory.
+
+#. Use the source for this document (also take a look at other read-the-docs websites such as `Canberra's website`_) as a template for the features that Sphinx offers.
+
+#. Once you're ready, type in ``make html`` to build the docs. You can find the built html pages under ``_build\html``.
+
+#. If it builds correctly, you can `commit and push`_ your changes. Now, the new docs are sitting in your personal repository, but the UAV repository still contains the old docs. To update the UAV repository, go into your personal repo and press the ``New pull request`` button. Fill out the required fields and submit. This will send a request to the UAV repository admins telling them that you want to merge your changes into the main website.
+
+#. The UAV admins will get back to you (soon hopefully, otherwise bug them on Slack) and you may need to make changes and make new commits (no need to make new pull requests, it updates automatically). Once they're satisfied, they'll accept your changes into the main code base and Bob's your uncle.
 
 .. _batch commands: http://www.makeuseof.com/tag/a-beginners-guide-to-the-windows-command-line/
 .. _github account: https://github.com/join
@@ -48,4 +58,7 @@ Simple steps to set up an environment for writing the documentation on Windows:
 .. _Python 2.7: https://www.python.org/downloads/
 .. _Virtualenv: https://www.dabapps.com/blog/introduction-to-pip-and-virtualenv-python/
 .. _introduction to command line: http://www.makeuseof.com/tag/a-beginners-guide-to-the-windows-command-line/
-.. _binary: http://www.lfd.uci.edu/~gohlke/pythonlibs/#markupsafe
+.. _You'll need to download the binary: http://www.lfd.uci.edu/~gohlke/pythonlibs/#markupsafe
+.. _clone it to your local machine: https://help.github.com/articles/cloning-a-repository/
+.. _Canberra's website: https://canberrauav.readthedocs.io/en/latest/index.html
+.. _commit and push: https://www.atlassian.com/git/tutorials/saving-changes/
